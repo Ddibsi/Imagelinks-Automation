@@ -29,370 +29,435 @@ public class CannedPage extends AbstractPage<CannedPage> {
 	// **************************************** Login Page ****************************************************
 	// ********************************************************************************************************
 
-	@FindBy(css = "#tbxName")
-	public WebElement userName;
 
-	@FindBy(css = "#tbxPassword")
-	public WebElement password;
-
-	@FindBy(css = "#chUnifiedLogin")
-	public WebElement UnifiedLogin;
-
-	@FindBy(css = "#btnlogin")
-	public WebElement loginButton;
-
-	@FindBy(xpath = "//a[contains(text(),'خروج')]")
-	public WebElement logoutButton;
-
-	@FindBy(css = "#ctl00_RadMenu1 > ul > li:nth-child(8) > a > span")
-	public WebElement dewanHeader;
-
-	// ********************************************************************************************************
-	// ************************************** Generalization **************************************************
-	// ********************************************************************************************************
-
-	@FindBy(xpath = "//span[contains(text(),'إدخال معاملة')]")
-	public WebElement AddProcessButton;
-
-	@FindBy(xpath = "//a[contains(text(),'تعميم')]")
-	public WebElement GeneralizationButton;
-
-	@FindBy(css = "#tbxSubject")
-	public WebElement SubjectField;
-
-	@FindBy(css = "#ctl00_MainContent_cal_2543_dateInput")
-	public WebElement GeneralizationDateField;
-
-	@FindBy(css = "#ctl00_MainContent_btnSave")
-	public WebElement SaveButton;
-
-	@FindBy(css = "#ctl00_MainContent_btnSaveDraft")
-	public WebElement SaveDraftButton;
-
-	@FindBy(css = "#MainContent_txtSerial_2583")
-	public WebElement GeneralizationGetSerialNumber;
-
-	@FindBy(css = "#MainContent_txt_2584")
-	public WebElement GeneralizationGetYear;
-
-	@FindBy(css = "#ctl00_MainContent_btnApprove")
-	public WebElement GeneralizeButton;
-
-	@FindBy(css = "#MainContent_summary1")
-	public WebElement DirectionTab;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_RadMenu1\"]/ul/li[5]/a")
-	public WebElement GeneralizationsHeaderButton;
-
-	@FindBy(xpath = "//tbody/tr[@id='ctl00_MainContent_RadGrid1_ctl00__0']/td[2]")
-	public WebElement GeneralizationFirstSerialNumber;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00__0\"]/td[3]")
-	public WebElement GeneralizationFirstSubjectText;
-
-	@FindBy(css = "#ctl00_MainContent_RadGrid1_ctl00_ctl04_OpenLink")
-	public WebElement GeneralizationsViewProcessButton;
-
-	@FindBy(css = "#ctl00_MainContent_RadGrid1_ctl00_ctl04_OpenLink")
-	public WebElement TaskListViewProcessButton;
-
-	@FindBy(css = "#ctl00_MainContent_rgmyRequest_ctl00_ctl04_OpenLink")
-	public WebElement MyProcessesListViewProcessButton;
-
-	@FindBy(xpath = "//span[contains(text(),'جميع المهام')]")
-	public WebElement AllTaskHeaderButton;
-
-	@FindBy(xpath = "//a[contains(text(),'معاملاتي')]")
-	public WebElement MyProcessesListHeaderButton;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00_ctl03_ctl01_ChangePageSizeTextBox\"]")
-	public WebElement GeneralizationSizePageInput;
-
-	@FindBy(xpath = "//span[contains(text(),'تغيير')]")
-	public WebElement ChangeGridSizeButton;
-
-	@FindBy(xpath = "//tbody/tr[@id='ctl00_MainContent_rgmyRequest_ctl00__0']/td[5]")
-	public WebElement ProcessStatus;
-
-	@FindBy(xpath = "//a[contains(text(),'مهام للإجراء')]")
-	public WebElement TaskListHeaderButton;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00__0\"]/td[5]")
-	public WebElement TaskListFirstSubjectText;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00__0\"]/td[5]")
-	public WebElement TasksToViewFirstSubjectText;
-
-	@FindBy(css = "ul.rmRootGroup li.profile a.rmLink.rmRootLink")
-	public WebElement UserNameHeaderButton;
-
-	@FindBy(xpath = "//a[contains(text(),'الملف الشخصي')]")
-	public WebElement ProfileHeaderButton;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_RadMenu1\"]/ul/li[1]/a/span")
-	public WebElement UserProfileDDL;
-
-	@FindBy(css = "#MainContent_tbxUserName")
-	public WebElement UserNameValue;
-
-	@FindBy(css = "#MainContent_summary1")
-	public WebElement OutgoingUsersDirectedTo;
-
-	@FindBy(css = "#ctl00_MainContent_btnApprove")
-	public WebElement DirectionButton;
-
-	@FindBy(xpath = "//a[contains(text(),'بريد صادر الى الخارج')]")
-	public WebElement OutgoingButton;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_RadMenu1\"]/ul/li[4]/div/ul/li[3]/a")
-	public WebElement TasksToView;
-
-	@FindBy(xpath = "//a[contains(text(),'تاريخ المهمة')]")
-	public WebElement TasksToViewDate;
-
-	@FindBy(xpath = "//span[contains(text(),'مشاهدة')]")
-	public WebElement ViewButton;
-
-	@FindBy(xpath = "//a[contains(text(),'المهام المنجزة')]")
-	public WebElement CompletedTasks;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_CompletedTasksGrid_ctl00__0\"]/td[4]")
-	public WebElement CompletedTasksFirstSubjectText;
-
-	@FindBy(css = "#MainContent_txt_2361")
-	public WebElement OutgoingGetSerialNumber;
-
-	@FindBy(xpath = "//a[contains(text(),'بريد وارد من الخارج')]")
-	public WebElement IncomingButton;
-
-	@FindBy(css = "#MainContent_txt_2494")
-	public WebElement IncomingGetSerialNumber;
-
-	// ********************************************************************************************************
-	// ************************************** UOP / JPPMC Fields **********************************************
-	// ********************************************************************************************************
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2371_Input")
-	public WebElement DivisionExporterUOP;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2375_Input")
-	public WebElement SalutationHandUOP;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_GVUserOrg_ctl00__0\"]/td[4]")
-	public WebElement OutgoingUserNameDirectedTo1UOP;
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2371_Input")
-	public WebElement CommissionersExportingOutgoingJPPMC;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2375_Input")
-	public WebElement AddresseeNameOutgoingJPPMC;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_GVUserOrg_ctl00__0\"]/td[4]")
-	public WebElement OutgoingUserNameDirectedTo1JPPMC;
-
-	@FindBy(css = "#MainContent_txt_2488")
-	public WebElement NumBookFromTheSource;
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2496_Input")
-	public WebElement IncomingCommissionerDestination;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2492_Input")
-	public WebElement SourceBookByName;
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2626_Input")
-	public WebElement ReceiverName;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2606_Input")
-	public WebElement Delivery;
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2496_Input")
-	public WebElement CommissionersExportingIncomingJPPMC;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2668_Input")
-	public WebElement RecipientsIncomingJPPMC;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2628_Input")
-	public WebElement SubReceiverNameIncomingJPPMC;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00__0\"]/td[5]")
-	public WebElement TasksToViewFirstSubjectTextJPPMC;
-
-	@FindBy(css = "#ctl00_MainContent_btnCloseProcess")
-	public WebElement CloseButton;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_GVUserOrg_ctl00__0\"]/td[2]")
-	public WebElement DepartmentLiaisonOfficerName;
-
-	@FindBy(css = "#MainContent_summary2")
-	public WebElement IncomingUsersDirectedTo;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_GVUserAssign_ctl00__0\"]/td[2]")
-	public WebElement IncomingUserNameDirectedTo1;
-
-	@FindBy(css = "#MainContent_rdchkCopy")
-	public WebElement ToViewRadioButton;
-
-	@FindBy(css = "#ctl00_MainContent_btnAddHierarchy")
-	public WebElement AddButton;
-
-	@FindBy(css = "#ctl00_MainContent_GVUserOrg_ctl00_ctl02_ctl01_mainCB")
-	public WebElement ClickOnAllCheckBox;
-
-	@FindBy(css = "#ctl00_MainContent_GVUserOrg_ctl00_ctl02_ctl01_ImgDelete")
-	public WebElement DeleteButton;
-
-	@FindBy(css = "#ctl00_MainContent_notification_rnCloseIcon")
-	public WebElement CloseNotificationButton;
-
-	// ********************************************************************************************************
-	// ************************************** Internal Correspondence ******************************************
-	// ********************************************************************************************************
-
-	@FindBy(xpath = "//a[contains(text(),'مراسلات داخلية')]")
-	public WebElement InternalCorrespondenceButton;
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2593_Input")
-	public WebElement InternalCorrespondenceCommissionerDestination;
-
-	@FindBy(css = "#ctl00_MainContent_ddlDivision_Input")
-	public WebElement DivisionInput;
-
-	@FindBy(css = "#ctl00_MainContent_ddlDepartment_Input")
-	public WebElement DepartmentInput;
-
-	@FindBy(css = "#MainContent_txtSerial_2591")
-	public WebElement InternalCorrespondenceGetSerialNumber;
-
-	@FindBy(xpath = "(//a[@class='rmLink'][contains(text(),'الكتب الداخلية')])[1]")
-	public WebElement InternalCorrespondenceButtonJPPMC;
-
-	@FindBy(css = "#ctl00_MainContent_ddlOrg_2593_Input")
-	public WebElement CommissionerInternalCorrespondenceJPPMC;
-
-	@FindBy(css = "#ctl00_MainContent_ddl_2648_Input")
-	public WebElement MainClassificationInternalCorrespondenceJPPMC;
-
-	@FindBy(css = "#MainContent_txt_2642")
-	public WebElement FileSubjectInternalCorrespondenceJPPMC;
-
-	@FindBy(css = "#MainContent_txtSerial_2591")
-	public WebElement InternalCorrespondenceGetSerialNumberJPPMC;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_li12\"]/a")
-	public WebElement ProcessModuleButton;
-
-	@FindBy(css = "#ctl00_Process")
-	public WebElement ProcessSubmoduleButton;
-
-	@FindBy(css = "#ctl00_MainContent_GVViewData_ctl02_lnkOption")
-	public WebElement InternalCorrespondenceOptions;
-
-	@FindBy(css = "#ctl00_MainContent_txtSaveDraftAR")
-	public WebElement SaveDraftArabicCaption;
-
-	@FindBy(css = "#ctl00_MainContent_txtSaveDraftEN")
-	public WebElement SaveDraftEnglishCaption;
-
-	@FindBy(css = "#ctl00_MainContent_ImgUpdate")
-	public WebElement UpdateButton;
-
-	@FindBy(css = "#ctl00_MainContent_ImgBack")
-	public WebElement BackButton;
-
-	// ********************************************************************************************************
-	// **************************************** Form Design / Search *******************************************
-	// ********************************************************************************************************
-
-	@FindBy(xpath = "//span[contains(text(),'FORM DESIGN')]")
-	public WebElement FormDesignModuleButton;
-
-	@FindBy(css = "#ctl00_FormControls")
-	public WebElement ContentOfFormSubmoduleButton;
-
-	@FindBy(css = "#ctl00_MainContent_DdlForm")
-	public WebElement FormDropDownList;
-
-	@FindBy(xpath = "//tbody/tr[2]/td[5]/a[1]/img[1]")
-	public WebElement EditOutgoingMailAttachment;
-
-	@FindBy(xpath = "//option[contains(text(),'Outgoing Mail')]")
-	public WebElement OutgoingMailForm;
-
-	@FindBy(css = "#ctl00_MainContent_tbxlblen")
-	public WebElement ControlSearchEnglishField;
-
-	@FindBy(css = "#ctl00_MainContent_ImgSearch")
-	public WebElement ControlSearchButton;
-
-	@FindBy(xpath = "//a[contains(text(),'بحث متقدم')]")
-	public WebElement SearchHeader;
-
-	@FindBy(css = "#ctl00_MainContent_btnsearch")
-	public WebElement SearchButton;
-
-	@FindBy(xpath = "//tbody/tr[@id='ctl00_MainContent_GridView1_ctl00__0']/td[1]/a[1]")
-	public WebElement FirstView;
-
-	// ********************************************************************************************************
-	// **************************************** Home Page ******************************************************
-	// ********************************************************************************************************
-
-	@FindBy(xpath = "//a[contains(text(),'الرئيسية')]")
-	public WebElement HomePage;
-
-	@FindBy(xpath = "//span[@id='MainContent_lblMyRequestCount']")
-	public WebElement MyTasksCount;
-
-	@FindBy(xpath = "//span[@id='MainContent_lblTasksCount']")
-	public WebElement TasksListCount;
-
-	@FindBy(xpath = "//span[@id='MainContent_lblCopingTaskCount']")
-	public WebElement TaskListToViewCount;
-
-	@FindBy(xpath = "//span[@id='MainContent_lblAnnouncementCount']")
-	public WebElement GeneralizationCount;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_RadMenu1\"]/ul/li[5]/a/span/span")
-	public WebElement GeneralizationCountMainBar;
-
-	@FindBy(xpath = "//span[@id='MainContent_lblNotificationCount']")
-	public WebElement NotificationsCount;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_RadMenu1\"]/ul/li[6]/a/span/span")
-	public WebElement NotificationsCountMainBar;
-
-	@FindBy(xpath = "//*[@id=\"MainContent_lblFollowupCount\"]")
-	public WebElement ManagerFollowCount;
-
-	@FindBy(xpath = "//span[@id='MainContent_lblCompletedTaskCount']")
-	public WebElement CompletedTasksCount;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_rgmyRequest_ctl00\"]/tfoot/tr/td/div/div[5]/strong[5]")
-	public WebElement MyTasksGridCount;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00_ctl03_ctl01_ChangePageSizeTextBox\"]")
-	public WebElement TasksListGridSize;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00_ctl03_ctl01_ChangePageSizeTextBox\"]")
-	public WebElement TaskListToViewGridSize;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00\"]/tfoot/tr/td/div/div[4]/strong[5]")
-	public WebElement GeneralizationGridCount;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00\"]/tfoot/tr/td/div/div[5]/strong[5]")
-	public WebElement NotificationsGridCount;
-
-	@FindBy(xpath = "//input[@id='ctl00_MainContent_TaskFollowup_ctl00_ctl03_ctl01_ChangePageSizeTextBox']")
-	public WebElement ManagerFollowGridSize;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_CompletedTasksGrid_ctl00\"]/tfoot/tr/td/div/div[4]/strong[5]")
-	public WebElement CompletedTasksGridCount;
-
-	@FindBy(xpath = "//div[contains(text(),'لا يوجد بيانات لإظهارها')]")
-	public WebElement NoDataToView;
-
-	@FindBy(xpath = "//*[@id=\"ctl00_MainContent_RadGrid1_ctl00_ctl02_ctl02_ImgMassAction\"]")
-	public WebElement MassActionButton;
+		@FindBy(
+				xpath = "//span[contains(text(),'EN')]"
+		)
+		public WebElement englishButton;
+		@FindBy(
+				xpath = "//span[contains(text(),'ع')]"
+		)
+		public WebElement arabicButton;
+		@FindBy(
+				css = "#auto-login-username"
+		)
+		public WebElement userName;
+		@FindBy(
+				css = "#auto-login-password"
+		)
+		public WebElement password;
+		@FindBy(
+				css = "#auto-login-unifiedLogin"
+		)
+		public WebElement UnifiedLogin;
+		@FindBy(
+				css = "#auto-login-submit"
+		)
+		public WebElement loginButton;
+		@FindBy(
+				css = "#auto-header-userFullName"
+		)
+		public WebElement UserNameValue;
+		@FindBy(
+				css = "div[class='font-size-one ng-star-inserted'] span"
+		)
+		public WebElement homePageValue;
+		@FindBy(
+				css = "#auto-header-userMenu"
+		)
+		public WebElement userInfoButton;
+		@FindBy(
+				css = "#auto-header-logout"
+		)
+		public WebElement logoutButton;
+		@FindBy(
+				css = "#auto-header-sideMenu"
+		)
+		public WebElement sideMenuButton;
+		@FindBy(
+				xpath = "/div/button/span"
+		)
+		public WebElement SuccessfulAlert;
+		@FindBy(
+				xpath = "/html[1]/body[1]/div[4]/div[1]/div[1]"
+		)
+		public WebElement FailAlert;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav[1]/div[1]/div[1]/mat-nav-list[1]/a[1]/div[1]/span[1]/div[1]"
+		)
+		public WebElement HomePageButton;
+		@FindBy(
+				css = "#auto-sideMenu-security"
+		)
+		public WebElement UserManagementAndSecurityButton;
+		@FindBy(
+				css = "#auto-sideMenu-users"
+		)
+		public WebElement UsersButton;
+		@FindBy(
+				css = "#auto-sideMenu-groups"
+		)
+		public WebElement GroupsButton;
+		@FindBy(
+				css = "#auto-users-saveUser"
+		)
+		public WebElement saveButton;
+		@FindBy(
+				css = "#auto-users-addButton"
+		)
+		public WebElement AddUsersButton;
+		@FindBy(
+				css = "#auto-users-addUsername"
+		)
+		public WebElement AddUserNameInput;
+		@FindBy(
+				css = "#auto-users-addFullName"
+		)
+		public WebElement AddFullNameInput;
+		@FindBy(
+				css = "#auto-users-addPassword"
+		)
+		public WebElement PasswordInput;
+		@FindBy(
+				css = "#auto-users-addEmail"
+		)
+		public WebElement AddEmailInput;
+		@FindBy(
+				css = "#auto-users-addAbbreviation"
+		)
+		public WebElement AddAbbreviationInput;
+		@FindBy(
+				css = "#auto-users-emailErrorMsg"
+		)
+		public WebElement EmailInvalidFormat;
+		@FindBy(
+				css = "#auto-users-sortDataId"
+		)
+		public WebElement sortUserId;
+		@FindBy(
+				css = "#auto-users-userNameElement"
+		)
+		public WebElement newUserName;
+		@FindBy(
+				css = "#auto-users-editUser"
+		)
+		public WebElement EditUserButton;
+		@FindBy(
+				css = "#auto-users-editUsername"
+		)
+		public WebElement EditUserNameInput;
+		@FindBy(
+				css = "#auto-users-editFullName"
+		)
+		public WebElement EditFullNameInput;
+		@FindBy(
+				css = "#auto-users-editEmail"
+		)
+		public WebElement EditEmailInput;
+		@FindBy(
+				css = "#auto-users-editAbbreviation"
+		)
+		public WebElement EditAbbreviationInput;
+		@FindBy(
+				css = "#auto-users-deleteUser"
+		)
+		public WebElement DeleteUserButton;
+		@FindBy(
+				xpath = "//div[@class='cdk-overlay-container']//button[2]"
+		)
+		public WebElement YesButton;
+		@FindBy(
+				css = "#auto-users-editUserPrivileges"
+		)
+		public WebElement EditUserPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-expandAllButton"
+		)
+		public WebElement ExpandAllButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-selectAllButton"
+		)
+		public WebElement SelectAllButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-savaButton"
+		)
+		public WebElement SavePrivilegesButton;
+		@FindBy(
+				css = "#auto-userPrivileges-backButton"
+		)
+		public WebElement BackButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-clearAllButton"
+		)
+		public WebElement ClearAllButton;
+		@FindBy(
+				css = "#auto-users-editUserStorageHierarchyPrivileges"
+		)
+		public WebElement EditStorageHierarchyPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-treeDropdownList"
+		)
+		public WebElement StorageHierarchyPrivilegesTreeDropdown;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-user-storage-hierarchy-privileges[1]/app-storage-hierarchy-privileges[1]/div[1]/div[2]/div[1]/div[1]/mat-tree[1]/mat-tree-node[1]/button[1]"
+		)
+		public WebElement AutomationDocumentClassButton;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-user-storage-hierarchy-privileges[1]/app-storage-hierarchy-privileges[1]/div[1]/div[2]/div[1]/div[1]/mat-tree[1]/mat-tree-node[1]/mat-checkbox[1]"
+		)
+		public WebElement AutomationDocumentClassCheckbox;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-selectAllButton"
+		)
+		public WebElement SelectAllDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-saveButton"
+		)
+		public WebElement SaveDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-userStorageHierarchyPrivileges-backButton"
+		)
+		public WebElement BackDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-clearAllButton"
+		)
+		public WebElement ClearAllDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-users-uploadSignature"
+		)
+		public WebElement SignatureButton;
+		@FindBy(
+				css = "#auto-signature-uploadButton"
+		)
+		public WebElement UploadedSignature;
+		@FindBy(
+				css = "#auto-signature-uploadImageSignature"
+		)
+		public WebElement UploadedImageSignature;
+		@FindBy(
+				css = "#auto-signature-closeButton"
+		)
+		public WebElement CloseSignatureButton;
+		@FindBy(
+				css = "#auto-users-userNameSearch"
+		)
+		public WebElement SearchUserNameInput;
+		@FindBy(
+				css = "#auto-users-searchButton"
+		)
+		public WebElement SearchButton;
+		@FindBy(
+				css = "#auto-group-addButton"
+		)
+		public WebElement AddGroupsButton;
+		@FindBy(
+				css = "#auto-group-addGroupName"
+		)
+		public WebElement AddGroupNameInput;
+		@FindBy(
+				css = "#auto-group-saveButton"
+		)
+		public WebElement SaveGroupButton;
+		@FindBy(
+				css = "#auto-group-sortDataId"
+		)
+		public WebElement sortGroupId;
+		@FindBy(
+				css = "#auto-group-groupNameElement"
+		)
+		public WebElement newGroupName;
+		@FindBy(
+				css = "#auto-group-editGroup"
+		)
+		public WebElement EditGroupButton;
+		@FindBy(
+				css = "#auto-group-editGroupName"
+		)
+		public WebElement EditGroupNameInput;
+		@FindBy(
+				css = "#auto-group-saveGroup"
+		)
+		public WebElement SaveEditGroupButton;
+		@FindBy(
+				css = "#auto-group-deleteGroup"
+		)
+		public WebElement DeleteGroupButton;
+		@FindBy(
+				xpath = "//*[@id=\"mat-dialog-0\"]/confirmation-dialog/div[2]/button[2]"
+		)
+		public WebElement YesDeleteGroupButton;
+		@FindBy(
+				css = "#auto-group-editGroupPrivileges"
+		)
+		public WebElement EditGroupPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-expandAllButton"
+		)
+		public WebElement GroupExpandAllButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-selectAllButton"
+		)
+		public WebElement GroupSelectAllButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-savaButton"
+		)
+		public WebElement SaveGroupPrivilegesButton;
+		@FindBy(
+				css = "#auto-groupPrivileges-backButton"
+		)
+		public WebElement BackGroupPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserPrivileges-clearAllButton"
+		)
+		public WebElement ClearAllGroupPrivilegesButton;
+		@FindBy(
+				css = "#auto-group-editGroupStorageHierarchyPrivileges"
+		)
+		public WebElement EditGroupStorageHierarchyPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-treeDropdownList"
+		)
+		public WebElement GroupStorageHierarchyPrivilegesTreeDropdown;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-group-storge-hierarchy-privileges[1]/div[1]/app-storage-hierarchy-privileges[1]/div[1]/div[2]/div[1]/div[1]/mat-tree[1]/mat-tree-node[1]/button[1]"
+		)
+		public WebElement GroupAutomationDocumentClassButton;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-group-storge-hierarchy-privileges[1]/div[1]/app-storage-hierarchy-privileges[1]/div[1]/div[2]/div[1]/div[1]/mat-tree[1]/mat-tree-node[1]/mat-checkbox[1]"
+		)
+		public WebElement GroupAutomationDocumentClassCheckbox;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-selectAllButton"
+		)
+		public WebElement GroupSelectAllDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-saveButton"
+		)
+		public WebElement GroupSaveDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-groupStorageHierarchyPrivileges-backButton"
+		)
+		public WebElement GroupBackDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-editUserStorageHierarchyPrivileges-clearAllButton"
+		)
+		public WebElement GroupClearAllDocumentClassPrivilegesButton;
+		@FindBy(
+				css = "#auto-group-editGroupMembers"
+		)
+		public WebElement EditGroupMemberButton;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-group-edit-group-members[1]/div[1]/div[1]/app-shuttle[1]/div[1]/div[1]/div[1]/div[2]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]"
+		)
+		public WebElement SearchUsersInGroupMember;
+		@FindBy(
+				css = "body > app-root > mat-sidenav-container > mat-sidenav-content > main > div > app-group-edit-group-members > div > div.card.margin-b-1 > app-shuttle > div > div > div:nth-child(1) > div.box > div:nth-child(4) > div > divF"
+		)
+		public WebElement SelectUserInGroupMember;
+		@FindBy(
+				css = "#auto-groupMembers-saveButton"
+		)
+		public WebElement GroupMemberSaveButton;
+		@FindBy(
+				css = "#auto-groupMembers-backButton"
+		)
+		public WebElement GroupMemberBackButton;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-group-edit-group-members[1]/div[1]/div[1]/app-shuttle[1]/div[1]/div[1]/div[3]/div[2]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]"
+		)
+		public WebElement SearchSelectUsersInGroupMember;
+		@FindBy(
+				css = "body > app-root > mat-sidenav-container > mat-sidenav-content > main > div > app-group-edit-group-members > div > div.card.margin-b-1 > app-shuttle > div > div > div:nth-child(3) > div.box > div > div > i"
+		)
+		public WebElement UnSelectUserInGroupMember;
+		@FindBy(
+				css = "#auto-sideMenu-storageHierarchy"
+		)
+		public WebElement StorageHierarchyButton;
+		@FindBy(
+				css = "#auto-sideMenu-treeManagement"
+		)
+		public WebElement TreeManagementButton;
+		@FindBy(
+				css = "#auto-sideMenu-addTreeButton"
+		)
+		public WebElement AddTreeButton;
+		@FindBy(
+				css = "#auto-addTreeMaintenance-treeNameAr"
+		)
+		public WebElement AddTreeNameArabicInput;
+		@FindBy(
+				css = "#auto-addTreeMaintenance-treeNameEn"
+		)
+		public WebElement AddTreeNameEnglishInput;
+		@FindBy(
+				css = "#auto-addTreeMaintenance-treeLevel"
+		)
+		public WebElement AddTreeLevelDropdown;
+		@FindBy(
+				xpath = "/html[1]/body[1]/app-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/div[1]/app-tree-maintenance-list[1]/div[1]/form[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]"
+		)
+		public WebElement SearchTreeNameInput;
+		@FindBy(
+				css = "#usernameInput"
+		)
+		public WebElement userNameViewer;
+		@FindBy(
+				css = "#passwordInput"
+		)
+		public WebElement passwordViewer;
+		@FindBy(
+				css = "#loginButton"
+		)
+		public WebElement loginButtonViewer;
+		@FindBy(
+				css = "div[id='treeListContainer'] span[class='k-select']"
+		)
+		public WebElement SelectAnArchiveDropdownList;
+		@FindBy(
+				xpath = "//li[contains(text(),'jopetrol')]"
+		)
+		public WebElement SelectTreeFromDropdownList;
+		@FindBy(
+				xpath = "//body/div[@id='bodyToRender']/div[@id='mainSplitter']/div[@id='content']/div[@id='outerLeftContainer']/div[@id='treeContent']/div[@id='treeSection']/div[@id='treeViewContainer']/div[@id='treeView']/ul[1]/li[1]/div[1]/span[1]"
+		)
+		public WebElement SelectDocumentClassFromDropdownList;
+		@FindBy(
+				css = "#mainGridToolBar_add"
+		)
+		public WebElement ClickOnAddDocument;
+		@FindBy(
+				xpath = "//body/div[4]/div[2]/div[1]/ul[1]/li[1]/span[1]/span[2]"
+		)
+		public WebElement ExpandDocumentInformation;
+		@FindBy(
+				css = "#documentInformationEnglishTitle"
+		)
+		public WebElement documentInformationEnglishTitleIndex;
+		@FindBy(
+				css = "#documentInformationArabicTitle"
+		)
+		public WebElement documentInformationArabicTitleIndex;
+		@FindBy(
+				xpath = "//body/div[4]/div[2]/div[1]/ul[1]/li[2]/div[1]/form[1]/div[1]/span[1]/span[1]/input[1]"
+		)
+		public WebElement privateSysCode1Index;
+		@FindBy(
+				xpath = "//body/div[4]/div[2]/div[1]/ul[1]/li[2]/div[1]/form[1]/div[2]/span[1]/span[1]/input[1]"
+		)
+		public WebElement privateSysCode2Index;
+		@FindBy(
+				css = "#documentprivate-indexes-form3"
+		)
+		public WebElement privateTextIndex;
+		@FindBy(
+				xpath = "//body/div[4]/div[2]/div[1]/ul[1]/li[2]/div[1]/form[1]/div[4]/span[1]/span[1]/input[1]"
+		)
+		public WebElement privateNumberIndex;
+		@FindBy(
+				css = "#document-submit-close"
+		)
+		public WebElement documentSubmitClose;
 
 	// ********************************************************************************************************
 	// **************************************** Basic Actions **************************************************
